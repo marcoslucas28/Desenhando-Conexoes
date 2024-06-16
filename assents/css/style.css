@@ -69,8 +69,21 @@ main{
 #videos div{
     width: 210px;
     height: 124px;
-    background-color: #cfcfcf;
+    background-color: #ffffff;
     border-radius: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#videos div img{
+    width: 50px;
+    height: 50px;
 }
 
 #videos{
