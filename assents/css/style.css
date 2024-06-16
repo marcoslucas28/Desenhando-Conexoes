@@ -39,3 +39,45 @@ nav a{
 nav a:hover{
     font-weight: 700;
 }
+
+main{
+    max-width: 870px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    margin: auto;
+}
+
+#sobre_projeto{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+#sobre_projeto h1{
+    text-align: center;
+}
+
+#tutoriais{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+}
+
+#videos div{
+    width: 210px;
+    height: 124px;
+    background-color: #cfcfcf;
+    border-radius: 10px;
+}
+
+#videos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 35px;
+    column-gap: 71px;
+    justify-items: center;
+}
