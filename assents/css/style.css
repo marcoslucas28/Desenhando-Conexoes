@@ -84,6 +84,13 @@ main{
     border-radius: 10px;
     border: 2px solid #000000;
     cursor: pointer;
+    overflow: hidden;
+    transition: .4s;
+}
+
+#videos .video_tutoriais:hover{
+    transform: scale(1.2);
+    border-color: #71b3da;
 }
 
 .poput{
@@ -116,6 +123,7 @@ main{
     color: #fff;
     font-weight: bold;
     z-index: 100;
+    cursor: pointer;
 }
 
 footer{
