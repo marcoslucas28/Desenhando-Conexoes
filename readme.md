@@ -8,12 +8,13 @@ O projeto **Desenhando Conexões** é um projeto da bolsa de pesquisa Fapema, no
 
 * HTML
 * CSS
+* Javascript
 
 ## Estado Atual do Site
 
 O site está em desenvolvimento e ainda não está completo. Aqui estão algumas áreas nas quais estamos trabalhando:
 
-- **Tutoriais**: Estrutura básica criada, mas ainda não tem conteúdo algum.
+- **Tutoriais**: Vídeo temporário disponível, pois os tutoriais ainda não foram gravados. Vídeos de arquivo fornecidos por Freepik, baixados de [www.videvo.net](www.videvo.net)
 - **Otimização do site**: O site pode apresentar problemas de posicionamento em telas grandes ou dispositivos como um iPad.
 - **Responsividade**: Todas as páginas estão responsivas, mas ainda há muito a melhorar.
 
@@ -45,7 +46,10 @@ Estamos abertos a sugestões e melhorias! Aqui estão algumas formas de você co
 ├── assents/                 # Demais arquivos que a página vai usar (imagens, CSS, JavaScript, etc.)
 │   ├── css/                # Arquivos CSS
 │   ├── img/                # Imagens e ícones usados
+│   ├── js/                # Arquivos javascript
+│   ├── scr/                # Videos usados
 ├── .gitignore              # Arquivos e diretórios ignorados pelo Git
 ├── about.html              # Arquivo sobre nós
 ├── index.html              # Arquivo principal
 └── README.md               # Este arquivo
+
