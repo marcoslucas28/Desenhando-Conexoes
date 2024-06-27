@@ -70,33 +70,52 @@ main{
     gap: 66px;
 }
 
-#videos div{
-    width: 210px;
-    height: 124px;
-    background-color: #ffffff;
-    border-radius: 10px;
+#videos{
     display: flex;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
+}
+
+#videos .video_tutoriais{
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
     border: 2px solid #000000;
     cursor: pointer;
+}
+
+.poput{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 8);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.poput video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 750px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.poput span{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 50px;
+    color: #fff;
     font-weight: bold;
-}
-
-
-#videos div img{
-    width: 50px;
-    height: 50px;
-}
-
-#videos{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 35px;
-    column-gap: 71px;
-    justify-items: center;
+    z-index: 100;
 }
 
 footer{
@@ -174,10 +193,6 @@ footer img {
         gap: 55px;
     }
 
-    #videos div{
-        width: 190px;
-    }
-
     #instagram{
         width: 40px;
     }
@@ -209,13 +224,8 @@ footer img {
         margin: auto;
     }
 
-    #videos{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        row-gap: 25px;
-        column-gap: 21px;
-        justify-items: center;
+    .poput video{
+        width: 95%;
     }
 
     #contato section{
@@ -274,9 +284,8 @@ footer img {
         max-width: 300px;
     }
 
-    #videos{
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+    #videos .video_tutoriais{
+        width: 90%;
     }
 
     #contato h1,h2{
