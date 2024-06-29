@@ -9,8 +9,3 @@ document.querySelector('.poput span').onclick = () => {
     document.querySelector('.poput').style.display = 'none'
 }
 
-function loading() {
-    document.querySelector('#loading').style.display = 'none'
-    document.querySelector('#conteudo').style.display = 'block'
-
-}
