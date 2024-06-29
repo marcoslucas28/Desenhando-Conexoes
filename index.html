@@ -10,75 +10,82 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
+    
 </head>
-<body>
-    <div class="poput">
-        <span>&times;</span>
-        <video src="assents/scr/video temporario.mp4" disableRemotePlayback autoplay controls></video>
+
+<body onload="loading()">
+    <div id="loading">
+        <h1>Carregando...</h1>
     </div>
-
-    <nav>
-        <div>
-            <img src="assents/img/Cnc logo 1.png" alt="Desenho de uma Cnc">
-            <h1>Desenhando Conexões</h1>
+    <div id="conteudo">
+        <div class="poput">
+            <span>&times;</span>
+            <video src="assents/scr/video temporario.mp4" disableRemotePlayback autoplay controls></video>
         </div>
-
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="about.html" target="_blank">Sobre nós</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="sobre_projeto">
-            <h1>Sobre o Projeto</h1>
-            <p>
-                O projeto "Desenhando Conexões: Um convite a todos!"
-                 redefine a experiência do hobby da robótica, programação e montagem de projetos, 
-                 integrando a expressão artística do desenho. Reconhecendo que a robótica é uma forma 
-                 envolvente de expressão criativa, mas que nem todos possuem o mesmo entusiasmo inicial, 
-                 este projeto busca superar barreiras ao introduzir a dimensão artística do desenho. 
-                 Através da integração da mini CNC plotter com tutoriais interativos, os participantes 
-                 podem escolher desenhos, personalizar e observar suas criaçõesganharem vida, 
-                 proporcionando uma nova e inspiradora faceta para o hobby. 
-            </p>
-        </section>
-
-        <section id="tutoriais">
-            <h1>Tutoriais</h1>
-
-            <div id="videos">
-                <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
-                <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
-                <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
-                <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
-                <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
-                <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
+    
+        <nav>
+            <div>
+                <img src="assents/img/Cnc logo 1.png" alt="Desenho de uma Cnc">
+                <h1>Desenhando Conexões</h1>
             </div>
-        </section>
-    </main>
-    <footer>
-        <img src="assents/img/Logo umibots.png" alt="Logo da Umibots">
-
-        <div id="contato">
-            <h1>Entre em contato conosco</h1>
-
-                <section>
-                    <div>
-                        <h2>E-mail</h2>
-                        <p><a href="mailto:umibots1@gmail.com">umibots1@gmail.com</a></p>
-                    </div>
-
-                    <div>
-                        <h2>Visite-nos</h2>
-                        <p>Rua João Pessoa s/n, Açailândia - MA 65930-000</p>
-                    </div>
-                </section>
-        </div>
-        <div></div><!--Div vazia para centralizar a div contato no centro-->
-        
-    </footer>
-    <a href="http://instagram.com/umibots" target="_blank"><img src="assents/img/social.png" alt="Icone do instagram" id="instagram"></a>
+    
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html" target="_blank">Sobre nós</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="sobre_projeto">
+                <h1>Sobre o Projeto</h1>
+                <p>
+                    O projeto "Desenhando Conexões: Um convite a todos!"
+                     redefine a experiência do hobby da robótica, programação e montagem de projetos, 
+                     integrando a expressão artística do desenho. Reconhecendo que a robótica é uma forma 
+                     envolvente de expressão criativa, mas que nem todos possuem o mesmo entusiasmo inicial, 
+                     este projeto busca superar barreiras ao introduzir a dimensão artística do desenho. 
+                     Através da integração da mini CNC plotter com tutoriais interativos, os participantes 
+                     podem escolher desenhos, personalizar e observar suas criaçõesganharem vida, 
+                     proporcionando uma nova e inspiradora faceta para o hobby. 
+                </p>
+            </section>
+    
+            <section id="tutoriais">
+                <h1>Tutoriais</h1>
+    
+                <div id="videos">
+                    <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
+                    <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
+                    <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
+                    <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
+                    <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
+                    <video class="video_tutoriais" src="assents/scr/video temporario.mp4" disableRemotePlayback muted></video>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <img src="assents/img/Logo umibots.png" alt="Logo da Umibots">
+    
+            <div id="contato">
+                <h1>Entre em contato conosco</h1>
+    
+                    <section>
+                        <div>
+                            <h2>E-mail</h2>
+                            <p><a href="mailto:umibots1@gmail.com">umibots1@gmail.com</a></p>
+                        </div>
+    
+                        <div>
+                            <h2>Visite-nos</h2>
+                            <p>Rua João Pessoa s/n, Açailândia - MA 65930-000</p>
+                        </div>
+                    </section>
+            </div>
+            <div></div><!--Div vazia para centralizar a div contato no centro-->
+            
+        </footer>
+        <a href="http://instagram.com/umibots" target="_blank"><img src="assents/img/social.png" alt="Icone do instagram" id="instagram"></a>
+    </div>
+    
 </body>
 <script src="assents/js/script.js"></script>
 </html>
