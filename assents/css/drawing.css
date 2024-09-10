@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #cffdff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+#canvas {
+    width: 80%;
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: crosshair;
+}
+
+#controls {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+button {
+    border: none;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+}
