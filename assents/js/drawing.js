@@ -41,3 +41,7 @@ canvas.addEventListener('mousedown', startDrawing)
 canvas.addEventListener('mousemove', draw)
 canvas.addEventListener('mouseup', stopDrawing)
 canvas.addEventListener('mouseout', stopDrawing)
+
+clearAllCanvas.addEventListener('click', () => {
+    ctx.clearRect(0,0, canvas.width, canvas.height)
+})
