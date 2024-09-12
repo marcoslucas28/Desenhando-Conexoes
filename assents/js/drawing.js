@@ -13,10 +13,10 @@ canvas.height = window.innerHeight * 0.8
 
 let drawing = false
 
-const startDrawing = (event) => {
+const startDrawing = (x,y) => {
     drawing = true
 
-    draw(event)
+    draw(x,y)
 }
 
 const stopDrawing = () => {
@@ -24,12 +24,8 @@ const stopDrawing = () => {
     ctx.beginPath()
 }
 
-const draw = (event) => {
+const draw = (x,y) => {
     if(!drawing) return
-
-    const rect = canvas.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
 
     if(mode == "drawing"){
         ctx.lineWidth = 5
@@ -84,24 +80,42 @@ erase.addEventListener('click', () => {
 
 selectStyle()
 
-canvas.addEventListener('mousedown', startDrawing)
+canvas.addEventListener('mousedown', (e) => {
+    const x = e.offsetX
+    const y = e.offsetY
+
+    startDrawing(x,y)
+})
 canvas.addEventListener('touchstart', (e) => {
     e.preventDefault()
 
-    startDrawing()
+    const x = e.touches[0].clientX - canvas.offsetLeft
+    const y = e.touches[0].clientY - canvas.offsetTop
+    
+    ctx.beginPath()
+
+    startDrawing(x,y)
 })
-canvas.addEventListener('mousemove', draw)
+canvas.addEventListener('mousemove', (e) => {
+    const x = e.offsetX
+    const y = e.offsetY
+
+    draw(x,y)
+})
 canvas.addEventListener('touchmove', (e) => {
     e.preventDefault()
 
-    draw()
+    const x = e.touches[0].clientX - canvas.offsetLeft
+    const y = e.touches[0].clientY - canvas.offsetTop
+
+    draw(x,y)
 })
 canvas.addEventListener('mouseup', stopDrawing)
 canvas.addEventListener('mouseout', stopDrawing)
 canvas.addEventListener('touchend', (e) => {
     e.preventDefault()
 
-    stopDrawing()
+    stopDrawing
 })
 
 clearAllCanvas.addEventListener('click', () => {
