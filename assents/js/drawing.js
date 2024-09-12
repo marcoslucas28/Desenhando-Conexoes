@@ -53,12 +53,9 @@ const draw = (event) => {
 }
 
 const dowloadImage = () => {
-    const svg = canvg.fromString(ctx, canvas.toDataURL());
-    const blob = new Blob([svg.svg()], { type: "image/svg+xml" });
-    const link = document.createElement('a');
-    link.download = 'desenho.svg';
-    link.href = URL.createObjectURL(blob);
-    link.click();
+    const pngDataUrl = canvas.toDataURL('image/png')
+
+    saveButton.href = pngDataUrl
 }
 
  function selectStyle() {
@@ -88,9 +85,12 @@ erase.addEventListener('click', () => {
 selectStyle()
 
 canvas.addEventListener('mousedown', startDrawing)
+canvas.addEventListener('touchstart', startDrawing)
 canvas.addEventListener('mousemove', draw)
+canvas.addEventListener('touchmove', draw)
 canvas.addEventListener('mouseup', stopDrawing)
 canvas.addEventListener('mouseout', stopDrawing)
+canvas.addEventListener('touchend', stopDrawing)
 
 clearAllCanvas.addEventListener('click', () => {
     ctx.clearRect(0,0, canvas.width, canvas.height)
