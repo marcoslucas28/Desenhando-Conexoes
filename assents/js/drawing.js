@@ -85,12 +85,24 @@ erase.addEventListener('click', () => {
 selectStyle()
 
 canvas.addEventListener('mousedown', startDrawing)
-canvas.addEventListener('touchstart', startDrawing)
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault()
+
+    startDrawing()
+})
 canvas.addEventListener('mousemove', draw)
-canvas.addEventListener('touchmove', draw)
+canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault()
+
+    draw()
+})
 canvas.addEventListener('mouseup', stopDrawing)
 canvas.addEventListener('mouseout', stopDrawing)
-canvas.addEventListener('touchend', stopDrawing)
+canvas.addEventListener('touchend', (e) => {
+    e.preventDefault()
+
+    stopDrawing()
+})
 
 clearAllCanvas.addEventListener('click', () => {
     ctx.clearRect(0,0, canvas.width, canvas.height)
