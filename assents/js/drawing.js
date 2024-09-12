@@ -13,7 +13,6 @@ canvas.height = window.innerHeight * 0.8
 
 let drawing = false
 
-
 const startDrawing = (event) => {
     drawing = true
 
@@ -53,6 +52,15 @@ const draw = (event) => {
     }
 }
 
+const dowloadImage = () => {
+    const svg = canvg.fromString(ctx, canvas.toDataURL());
+    const blob = new Blob([svg.svg()], { type: "image/svg+xml" });
+    const link = document.createElement('a');
+    link.download = 'desenho.svg';
+    link.href = URL.createObjectURL(blob);
+    link.click();
+}
+
  function selectStyle() {
     if(mode == "drawing"){
         drawingButton.style.border = '5px solid #b7ffa1'
@@ -87,3 +95,5 @@ canvas.addEventListener('mouseout', stopDrawing)
 clearAllCanvas.addEventListener('click', () => {
     ctx.clearRect(0,0, canvas.width, canvas.height)
 })
+
+saveButton.addEventListener('click', dowloadImage)
