@@ -1,15 +1,19 @@
+const app = document.getElementById('app')
+
 const saveButton = document.getElementById('dowload')
 const drawingButton = document.getElementById('drawingMode')
 const clearAllCanvas = document.getElementById('clear')
 const erase = document.getElementById('erase')
+const lineWidthButton = document.getElementById('selectLineWidth')
 
 let mode = "drawing"
+let lineWidth = 5
 
 const canvas = document.querySelector('#canvas')
 const ctx = canvas.getContext('2d')
 
-canvas.width = window.innerWidth * 0.8
-canvas.height = window.innerHeight * 0.8
+canvas.width = app.clientWidth * 0.5
+canvas.height = app.clientHeight * 0.6
 
 let drawing = false
 
@@ -28,7 +32,7 @@ const draw = (x,y) => {
     if(!drawing) return
 
     if(mode == "drawing"){
-        ctx.lineWidth = 5
+        ctx.lineWidth = lineWidth
         ctx.lineCap = 'round'
         ctx.strokeStyle = '#000'
     
@@ -37,7 +41,7 @@ const draw = (x,y) => {
         ctx.beginPath()
         ctx.moveTo(x, y)
     }else if(mode == "erase"){
-        ctx.lineWidth = 5
+        ctx.lineWidth = lineWidth
         ctx.lineCap = 'round'
         ctx.strokeStyle = '#fff'
     
@@ -56,13 +60,13 @@ const dowloadImage = () => {
 
  function selectStyle() {
     if(mode == "drawing"){
-        drawingButton.style.border = '5px solid #b7ffa1'
+        drawingButton.style.border = '2px solid #cffdff'
     }else {
         drawingButton.style.border = 'none'
     }
     
     if(mode == "erase"){
-        erase.style.border = '5px solid #b7ffa1'
+        erase.style.border = '2px solid #cffdff'
     }else {
         erase.style.border = 'none'
     }
@@ -123,3 +127,5 @@ clearAllCanvas.addEventListener('click', () => {
 })
 
 saveButton.addEventListener('click', dowloadImage)
+
+lineWidthButton.addEventListener('input', () => lineWidth = lineWidthButton.value)
