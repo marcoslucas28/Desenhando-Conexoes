@@ -185,15 +185,18 @@ canvas.addEventListener('mouseout', stopDrawing);
 
 canvas.addEventListener('touchstart', (e) => {
     e.preventDefault();
-    const x = e.touches[0].clientX - canvas.offsetLeft;
-    const y = e.touches[0].clientY - canvas.offsetTop;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.touches[0].clientX - rect.left;
+    const y = e.touches[0].clientY - rect.top;
+    savedCanvas = ctx.getImageData(0, 0, canvas.width, canvas.height);
     startDrawing({ offsetX: x, offsetY: y });
 });
 
 canvas.addEventListener('touchmove', (e) => {
     e.preventDefault();
-    const x = e.touches[0].clientX - canvas.offsetLeft;
-    const y = e.touches[0].clientY - canvas.offsetTop;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.touches[0].clientX - rect.left;
+    const y = e.touches[0].clientY - rect.top;
     draw({ offsetX: x, offsetY: y });
 });
 
