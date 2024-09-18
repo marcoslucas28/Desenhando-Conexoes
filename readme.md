@@ -43,13 +43,26 @@ Estamos abertos a sugestões e melhorias! Aqui estão algumas formas de você co
 
 ```plaintext
 /
-├── assents/                 # Demais arquivos que a página vai usar (imagens, CSS, JavaScript, etc.)
+├── assents/                # Demais arquivos que a página vai usar (imagens, CSS, JavaScript, etc.)
 │   ├── css/                # Arquivos CSS
 │   ├── img/                # Imagens e ícones usados
-│   ├── js/                # Arquivos javascript
+│   ├── js/                 # Arquivos javascript
 │   ├── scr/                # Videos usados
 ├── .gitignore              # Arquivos e diretórios ignorados pelo Git
 ├── about.html              # Arquivo sobre nós
+├── drawing.html            # Arquivo onde o usúario fará o desenho desejado
 ├── index.html              # Arquivo principal
 └── README.md               # Este arquivo
 
+````
+
+## Créditos
+
+### Ícones
+
+- <a href="https://www.flaticon.com/br/icones-gratis/losango" title="losango ícones">Losango ícones criados por Roundicons Premium - Flaticon</a>
+- <a href="https://www.flaticon.com/br/icones-gratis/circulo" title="círculo ícones">Círculo ícones criados por FR_Media - Flaticon</a>
+- <a href="https://www.flaticon.com/br/icones-gratis/triangulo" title="triângulo ícones">Triângulo ícones criados por Freepik - Flaticon</a>
+- <a href="https://www.flaticon.com/br/icones-gratis/times-square" title="times square ícones">Times square ícones criados por Smashicons - Flaticon</a>
+- <a href="https://www.flaticon.com/br/icones-gratis/borracha" title="borracha ícones">Borracha ícones criados por Freepik - Flaticon</a>
+- <a href="https://www.flaticon.com/br/icones-gratis/pincel" title="pincel ícones">Pincel ícones criados por Freepik - Flaticon</a>
