@@ -64,9 +64,5 @@ input[type="file"] {
 }
 
 #output {
-    background-color: #ff7676;
-    color: #fff;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    width: 20rem;
+    color: #ff7676;
 }
