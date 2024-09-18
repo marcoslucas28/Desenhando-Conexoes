@@ -14,15 +14,18 @@
 </head>
 
 <body>
-
-    <h1>Envie seu desenho para CNC</h1>
     <div id="app">
-        <button id="connect">Conectar à CNC</button>
-        <input type="file" id="gcodeFile" accept=".gcode">
-        <button id="sendGcode" disabled>Enviar Desenho</button>
-        <pre id="output">Espere a cnc executar</pre>
-    </div>
+        <h1>Envie seu desenho para CNC</h1>
+        <div id="connectDiv">
+            <button id="connect">Conectar à CNC</button>
+            <input type="file" id="gcodeFile" accept=".gcode">
+        </div>
+        <div id="send">
+            <button id="sendGcode" disabled>Enviar Desenho</button>
+            <pre id="output">Conectado ao Arduino via Serial</pre>
+        </div>
 
+    </div>
 
     <script src="assents/js/cncControl.js"></script>
 </body>
