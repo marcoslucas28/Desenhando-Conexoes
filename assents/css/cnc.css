@@ -20,6 +20,10 @@ body {
     gap: 1rem;
 }
 
+button {
+    cursor: pointer;
+}
+
 #connectDiv {
     display: flex;
     flex-wrap: wrap;
