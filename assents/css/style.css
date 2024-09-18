@@ -220,7 +220,21 @@ footer img {
     width: 60px;
 }
 
+#links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
 
+#links button {
+    border: none;
+    padding: 1rem;
+    background-color: #71b3da;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 2rem;
+}
 
 @media (max-width:900px){
     main p{
