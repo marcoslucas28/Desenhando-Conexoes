@@ -1,21 +1,21 @@
 let port;
 let writer;
-let reader;
+let writableStreamClosed;
 
 document.getElementById('connect').addEventListener('click', async () => {
     try {
         port = await navigator.serial.requestPort();
-        await port.open({ baudRate: 115200 });
+        await port.open({ baudRate: 9600 });
 
         const encoder = new TextEncoderStream();
-        const writableStreamClosed = encoder.readable.pipeTo(port.writable);
+        writableStreamClosed = encoder.readable.pipeTo(port.writable);
         writer = encoder.writable.getWriter();
 
         document.getElementById('sendGcode').disabled = false;
-
         document.getElementById('output').textContent = 'Conectado ao Arduino via Serial.\n';
     } catch (error) {
         console.error('Erro ao conectar: ', error);
+        document.getElementById('output').textContent = 'Erro ao conectar: ' + error + '\n';
     }
 });
 
@@ -28,8 +28,8 @@ document.getElementById('sendGcode').addEventListener('click', async () => {
         return;
     }
 
-    const reader = new FileReader();
-    reader.onload = async (event) => {
+    const fileReader = new FileReader();
+    fileReader.onload = async (event) => {
         const gcode = event.target.result.split('\n');
 
         for (let line of gcode) {
@@ -41,5 +41,17 @@ document.getElementById('sendGcode').addEventListener('click', async () => {
         document.getElementById('output').textContent += 'G-code enviado com sucesso.\n';
     };
 
-    reader.readAsText(file);
+    fileReader.readAsText(file);
+});
+
+document.getElementById('disconnect').addEventListener('click', async () => {
+    try {
+        await writer.close();
+        await writableStreamClosed;
+        await port.close();
+        document.getElementById('sendGcode').disabled = true;
+        document.getElementById('output').textContent += 'Desconectado do Arduino.\n';
+    } catch (error) {
+        console.error('Erro ao desconectar: ', error);
+    }
 });
